@@ -15,7 +15,7 @@ namespace Pokedex_CSharp
     {
         Conexion miConexion = new Conexion();
         DataTable misPokemons = new DataTable();
-        int idActual = 1; //Guarda el id del pokemon que se está
+        int idActual = 1; //Guarda el id del pokemon que se está viendo
         public VentanaPrincipal()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace Pokedex_CSharp
             idActual++;
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
-            pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
+            imagenPokemon.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
         }
 
         private void VentanaPrincipal_Load(object sender, EventArgs e)
@@ -45,11 +45,27 @@ namespace Pokedex_CSharp
             idActual--;
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
-            pictureBox1.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
+            imagenPokemon.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void nombrePokemon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void masInfo_Click(object sender, EventArgs e)
+        {
+
+            Ventana2 v = new Ventana2();
+
+            v.cambiaDescripcionPokemon(misPokemons.Rows[0]["descripcion"].ToString());
+            v.Show();
 
         }
     }

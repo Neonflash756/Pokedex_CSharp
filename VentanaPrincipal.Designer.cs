@@ -30,10 +30,13 @@ namespace Pokedex_CSharp
         private void InitializeComponent()
         {
             this.izquierda = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imagenPokemon = new System.Windows.Forms.PictureBox();
             this.derecha = new System.Windows.Forms.Button();
             this.nombrePokemon = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.masInfo = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenPokemon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // izquierda
@@ -47,14 +50,14 @@ namespace Pokedex_CSharp
             this.izquierda.UseVisualStyleBackColor = true;
             this.izquierda.Click += new System.EventHandler(this.izquierda_Click);
             // 
-            // pictureBox1
+            // imagenPokemon
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(33, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(257, 313);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.imagenPokemon.Location = new System.Drawing.Point(33, 12);
+            this.imagenPokemon.Name = "imagenPokemon";
+            this.imagenPokemon.Size = new System.Drawing.Size(257, 313);
+            this.imagenPokemon.TabIndex = 1;
+            this.imagenPokemon.TabStop = false;
+            this.imagenPokemon.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // derecha
             // 
@@ -73,21 +76,42 @@ namespace Pokedex_CSharp
             this.nombrePokemon.Name = "nombrePokemon";
             this.nombrePokemon.Size = new System.Drawing.Size(100, 23);
             this.nombrePokemon.TabIndex = 3;
-            this.nombrePokemon.Text = "label1";
+            this.nombrePokemon.Click += new System.EventHandler(this.nombrePokemon_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(605, 458);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // masInfo
+            // 
+            this.masInfo.Location = new System.Drawing.Point(409, 141);
+            this.masInfo.Name = "masInfo";
+            this.masInfo.Size = new System.Drawing.Size(75, 23);
+            this.masInfo.TabIndex = 6;
+            this.masInfo.Text = "button1";
+            this.masInfo.UseVisualStyleBackColor = true;
+            this.masInfo.Click += new System.EventHandler(this.masInfo_Click);
             // 
             // VentanaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 471);
+            this.ClientSize = new System.Drawing.Size(629, 482);
+            this.Controls.Add(this.masInfo);
             this.Controls.Add(this.nombrePokemon);
             this.Controls.Add(this.derecha);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imagenPokemon);
             this.Controls.Add(this.izquierda);
+            this.Controls.Add(this.pictureBox2);
             this.Name = "VentanaPrincipal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.VentanaPrincipal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagenPokemon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -95,9 +119,11 @@ namespace Pokedex_CSharp
         #endregion
 
         private System.Windows.Forms.Button izquierda;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imagenPokemon;
         private System.Windows.Forms.Button derecha;
         private System.Windows.Forms.Label nombrePokemon;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button masInfo;
     }
 }
 
