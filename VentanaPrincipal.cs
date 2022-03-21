@@ -19,6 +19,23 @@ namespace Pokedex_CSharp
         public VentanaPrincipal()
         {
             InitializeComponent();
+            izquierda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            izquierda.FlatAppearance.BorderSize = 0;
+            izquierda.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            izquierda.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            izquierda.BackColor = Color.Transparent;
+
+            derecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            derecha.FlatAppearance.BorderSize = 0;
+            derecha.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            derecha.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            derecha.BackColor = Color.Transparent;
+
+            masInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            masInfo.FlatAppearance.BorderSize = 0;
+            masInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            masInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            masInfo.BackColor = Color.Transparent;
         }
 
         private Image convierteBlobAImagen(byte[] img)
