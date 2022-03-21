@@ -16,13 +16,22 @@ namespace Pokedex_CSharp
         String altura = "";
         String peso = "";
         String especie = "";
-        String  = "";
-        String  = "";
-        String  = "";
+       
         public Ventana2()
         {
             InitializeComponent();
-            
+
+            label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            label1.BackColor = Color.Transparent;
+
+            label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            label2.BackColor = Color.Transparent;
+
+            label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            label4.BackColor = Color.Transparent;
+
+            label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            label3.BackColor = Color.Transparent;
         }
 
         private void cajaDescripcion_Click(object sender, EventArgs e)
@@ -34,14 +43,17 @@ namespace Pokedex_CSharp
             cajaDescripcion.Text = descripcion;
         }
 
-        public void cambiaAlturaPokemon(String altura)
-        {
+        public void cambiaAlturaPokemon(String altura){
             label3.Text = altura;
         }
 
-        public void cambiaPesoPokemon(String peso)
-        {
+        public void cambiaPesoPokemon(String peso){
             label4.Text = peso;
+        }
+
+        public void cambiaEspeciePokemon(String especie)
+        {
+            label6.Text = especie;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -63,6 +75,14 @@ namespace Pokedex_CSharp
 
         }
 
-        
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

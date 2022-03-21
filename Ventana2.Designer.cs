@@ -61,6 +61,7 @@ namespace Pokedex_CSharp
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(305, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 24);
@@ -71,15 +72,18 @@ namespace Pokedex_CSharp
             // 
             // label2
             // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(305, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "PESO";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(373, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 24);
@@ -89,6 +93,7 @@ namespace Pokedex_CSharp
             // 
             // label4
             // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(376, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 24);
@@ -102,17 +107,17 @@ namespace Pokedex_CSharp
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 40);
             this.label5.TabIndex = 6;
-            this.label5.Text = "POKEMON";
+            this.label5.Text = "Pokemon";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(345, 9);
+            this.label6.Location = new System.Drawing.Point(333, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 40);
             this.label6.TabIndex = 7;
-            this.label6.Text = "POKEMON";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // Ventana2
             // 

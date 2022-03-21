@@ -36,6 +36,9 @@ namespace Pokedex_CSharp
             masInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
             masInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             masInfo.BackColor = Color.Transparent;
+
+            nombrePokemon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            nombrePokemon.BackColor = Color.Transparent;
         }
 
         private Image convierteBlobAImagen(byte[] img)
@@ -82,6 +85,9 @@ namespace Pokedex_CSharp
             Ventana2 v = new Ventana2();
 
             v.cambiaDescripcionPokemon(misPokemons.Rows[0]["descripcion"].ToString());
+            v.cambiaAlturaPokemon(misPokemons.Rows[0]["altura"].ToString());
+            v.cambiaPesoPokemon(misPokemons.Rows[0]["peso"].ToString());
+            v.cambiaEspeciePokemon(misPokemons.Rows[0]["especie"].ToString());
             v.Show();
 
         }

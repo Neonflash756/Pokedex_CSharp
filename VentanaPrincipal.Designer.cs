@@ -77,10 +77,15 @@ namespace Pokedex_CSharp
             // 
             // nombrePokemon
             // 
-            this.nombrePokemon.Location = new System.Drawing.Point(296, 12);
+            this.nombrePokemon.BackColor = System.Drawing.Color.Transparent;
+            this.nombrePokemon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombrePokemon.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.nombrePokemon.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.nombrePokemon.Location = new System.Drawing.Point(391, 189);
             this.nombrePokemon.Name = "nombrePokemon";
-            this.nombrePokemon.Size = new System.Drawing.Size(100, 23);
+            this.nombrePokemon.Size = new System.Drawing.Size(163, 38);
             this.nombrePokemon.TabIndex = 3;
+            this.nombrePokemon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nombrePokemon.Click += new System.EventHandler(this.nombrePokemon_Click);
             // 
             // masInfo
@@ -122,8 +127,8 @@ namespace Pokedex_CSharp
         private System.Windows.Forms.Button izquierda;
         private System.Windows.Forms.PictureBox imagenPokemon;
         private System.Windows.Forms.Button derecha;
-        private System.Windows.Forms.Label nombrePokemon;
         private System.Windows.Forms.Button masInfo;
+        private System.Windows.Forms.Label nombrePokemon;
     }
 }
 
