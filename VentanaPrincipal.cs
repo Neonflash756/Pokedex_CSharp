@@ -50,6 +50,10 @@ namespace Pokedex_CSharp
         private void derecha_Click(object sender, EventArgs e)
         {
             idActual++;
+            if (idActual > 151)
+            {
+                idActual = 1;
+            }
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
             imagenPokemon.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
@@ -63,8 +67,13 @@ namespace Pokedex_CSharp
         private void izquierda_Click(object sender, EventArgs e)
         {
             idActual--;
+            if (idActual <= 0)
+            {
+                idActual = 151;
+            }
             misPokemons = miConexion.getPokemonPorId(idActual);
             nombrePokemon.Text = misPokemons.Rows[0]["nombre"].ToString();
+
             imagenPokemon.Image = convierteBlobAImagen((byte[])misPokemons.Rows[0]["imagen"]);
 
         }
